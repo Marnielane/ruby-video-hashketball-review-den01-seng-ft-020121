@@ -194,3 +194,18 @@ def player_numbers (team_name)
   end
   return player_numbers
 end
+
+def player_stats (player_name)
+  game_hash.each do |location, team_stats|
+    team_stats.each do |key, value|
+      if key == :players
+        value.each do |player|
+          if player_name == player[:player_name]
+            player.delete(:player_name)
+            return player
+          end
+        end
+      end
+    end
+  end
+end
