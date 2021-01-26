@@ -172,7 +172,7 @@ def team_colors (team_name)
   #     return team_stats[:colors]
   #   end
   # end
-  team(team_names)
+  team(team_names)[:colors]
 end
 
 def team_names
