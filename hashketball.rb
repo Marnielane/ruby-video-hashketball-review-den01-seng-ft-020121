@@ -130,6 +130,9 @@ end
 
 def players
   #players = game_hash[:home][:players].merge(game_hash[:away][:players])
+    game_hash.each do |location, team_stats|
+       team_stats[:players] = players
+    end
 end
 
 def num_points_scored (player_name)
@@ -143,11 +146,12 @@ def num_points_scored (player_name)
 end
 
 def shoe_size (player_name)
-  game_hash.each do |location, team_stats|
-    team_stats[:players].each do |player|
-      if player[:player_name] == player_name
-        return player[:shoe]
-      end
-    end
-  end
+  # game_hash.each do |location, team_stats|
+  #   team_stats[:players].each do |player|
+  #     if player[:player_name] == player_name
+  #       return player[:shoe]
+  #     end
+  #   end
+  # end
+  
 end
