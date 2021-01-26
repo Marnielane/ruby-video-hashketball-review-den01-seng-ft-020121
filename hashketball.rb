@@ -134,6 +134,9 @@ end
 #       team_stats[:players] = players
 #     end
 # end
+def team (team_name)
+  case team_name
+  when 
 
 def num_points_scored (player_name)
   game_hash.each do |location, team_stats|
