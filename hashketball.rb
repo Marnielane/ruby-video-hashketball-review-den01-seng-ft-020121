@@ -180,7 +180,7 @@ end
 
 def player_numbers (team_name)
   #team(team_name)[:players].map{|key, value| value[:number]}
-  game_hash.map do |location, team_stats|
+  game_hash.each do |location, team_stats|
     if team_stats[:team_name] == team_name
       team_stats.each do |key, value|
         value.each do |player|
