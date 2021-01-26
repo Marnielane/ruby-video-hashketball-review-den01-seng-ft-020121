@@ -136,7 +136,12 @@ end
 # end
 def team (team_name)
   case team_name
-  when 
+  when game_hash[:home][:team_name]
+    game_hash[:home]
+  when game_hash[:away][:team_name]
+    game_hash[:away]
+  end
+end
 
 def num_points_scored (player_name)
   game_hash.each do |location, team_stats|
