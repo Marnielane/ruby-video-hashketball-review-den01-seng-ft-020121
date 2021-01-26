@@ -153,5 +153,7 @@ def shoe_size (player_name)
   #     end
   #   end
   # end
-  
+  if players[:player_name] == player_name
+    return players[:shoe]
+  end
 end
