@@ -214,6 +214,7 @@ def big_shoe_rebounds
   biggest_shoe = 0 
   rebounds = 0 
   game_hash.each do |location, team_details|
+    binding.pry
     team_details.each do |players, player_stats|
       if players = :players
         player_stats.each do |player|
